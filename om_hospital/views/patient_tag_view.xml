@@ -1,0 +1,54 @@
+<odoo>
+
+    <record id="patient_tag_tree_view" model="ir.ui.view">
+        <field name="name">patient.tag.tree.view</field>
+        <field name="model">patient.tag</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="color" widget="color_picker"/>
+                <field name="active" widget="boolean_toggle"/>
+
+            </tree>
+        </field>
+    </record>
+
+    <record id="patient_tag_form_view" model="ir.ui.view">
+        <field name="name">patient.tag.form.view</field>
+        <field name="model">patient.tag</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="color" widget="color_picker"/>
+                            <field name="color_2" widget="color"/>
+                            <field name="active" widget="boolean_toggle"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_patient_tag" model="ir.actions.act_window">
+        <field name="name">Patients</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">patient.tag</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first patient tag!
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="patient_tag_menu"
+              name="Tags"
+              action="action_patient_tag"
+              parent="menu_configuration"/>
+
+</odoo>

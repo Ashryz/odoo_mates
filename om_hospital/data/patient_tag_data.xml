@@ -1,0 +1,17 @@
+<odoo>
+    <record id="patient_tag_vip" model="patient.tag">
+        <field name="name">VIP</field>
+    </record>
+
+    <record id="patient_tag_kid" model="patient.tag">
+        <field name="name">Kid</field>
+    </record>
+
+    <record id="patient_tag_miss" model="patient.tag">
+        <field name="name">Miss</field>
+    </record>
+
+    <record id="patient_tag_mr" model="patient.tag">
+        <field name="name">Mr</field>
+    </record>
+</odoo>
